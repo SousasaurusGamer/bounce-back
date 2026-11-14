@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dak101g8e50u2"]
 
 [ext_resource type="Texture2D" uid="uid://cim03nx5sn5hp" path="res://kenney_scribble-platformer-expansion_1.0/PNG/Default/block_glass.png" id="1_ho27h"]
+[ext_resource type="Script" uid="uid://drekluvxmrb0a" path="res://piso.gd" id="1_rf48w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op1xx"]
 size = Vector2(704, 59)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1916798655]
+[node name="piso" type="StaticBody2D" unique_id=1916798655]
+script = ExtResource("1_rf48w")
 
 [node name="BlockGlass" type="Sprite2D" parent="." unique_id=1044548259]
 position = Vector2(-0.49998474, 0)
