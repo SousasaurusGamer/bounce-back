@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cmbmhgyvdpyt4"]
+
+[ext_resource type="PackedScene" uid="uid://dak101g8e50u2" path="res://piso.tscn" id="1_xi31o"]
+[ext_resource type="PackedScene" uid="uid://bu42qwqtfx1u0" path="res://brayan.tscn" id="2_eciuy"]
+
+[node name="nivel 1" type="Node2D" unique_id=1777481785]
+
+[node name="StaticBody2D" parent="." unique_id=1916798655 instance=ExtResource("1_xi31o")]
+position = Vector2(427, 194)
+
+[node name="Brayan" parent="." unique_id=713056017 instance=ExtResource("2_eciuy")]
+position = Vector2(499, 48)
