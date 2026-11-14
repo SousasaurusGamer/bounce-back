@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bu42qwqtfx1u0"]
+
+[ext_resource type="Script" uid="uid://u5a2dm4xdacp" path="res://Brayan.gd" id="1_r8rwr"]
+[ext_resource type="Texture2D" uid="uid://bccijlonxcldw" path="res://icon.svg" id="2_w461k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op1xx"]
+size = Vector2(125, 121)
+
+[node name="Brayan" type="CharacterBody2D" unique_id=713056017]
+script = ExtResource("1_r8rwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=335433791]
+texture = ExtResource("2_w461k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1774688832]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_op1xx")
