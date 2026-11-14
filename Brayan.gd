@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # estadisticas de personaje
 @export var speed: float = 130.0
-@export var jump_velocity: float = -275.0
+@export var jump_velocity: float = -500.0
 
 # Movimiento del personaje
 func _physics_process(delta: float) -> void:
@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
         velocity += get_gravity() * delta
 
     # salto
-    if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+    if Input.is_action_just_pressed("ui_up") and is_on_floor():
         velocity.y = jump_velocity
     
     # Movimiento
@@ -26,5 +26,3 @@ func _physics_process(delta: float) -> void:
         )
 
     move_and_slide()
-    git fetch origin
-git switch --track origin/movimiento
