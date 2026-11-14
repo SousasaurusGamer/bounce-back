@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
 # estadisticas de personaje
+@export var max_health: int = 40 
 @export var speed: float = 130.0
 @export var jump_velocity: float = -500.0
 
 # Movimiento del personaje
 func _physics_process(delta: float) -> void:
+
+    if Input.is_action_just_pressed("ui_down"):
+        _take_damage(10)
 
     # gravedad
     if not is_on_floor():
@@ -25,4 +29,27 @@ func _physics_process(delta: float) -> void:
             velocity.x, 0, speed * 8 * delta 
         )
 
+
     move_and_slide()
+    
+     # Prueba temporal de daño
+    if Input.is_action_just_pressed("ui_down"):
+        recibir_danio(10)
+
+
+# RECIBIR DAÑO
+func recibir_danio(cantidad: int) -> void:
+    if current_health <= 0:
+        return
+
+    current_health = max(current_health - cantidad, 0)
+
+    print("Vida de Brayan: ", current_health)
+
+    if current_health == 0:
+        morir()
+
+
+# MUERTE DEL PERSONAJE
+func morir() -> void:
+    print("Brayan ha muerto")
